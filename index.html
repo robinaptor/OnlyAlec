@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="robots" content="noindex,nofollow" />
+
+    <title>Alec Vionnet – cherche une naine 🔞</title>
+    <meta property="og:title" content="Alec Vionnet – cherche une naine 🔞" />
+    <meta
+      property="og:description"
+      content="Contenu exclusif. Pas de blague."
+    />
+    <meta
+      property="og:image"
+      content="https://VOTRE_DOMAINE_ICI/assets/Alec.png"
+    />
+    <!-- URL absolue à remplacer après déploiement -->
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔺</text></svg>"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;800&family=Lilita+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- PARTIE 1 : HERO -->
+    <section id="hero">
+      <div class="hero-title">
+        <h1>OnlyAlec</h1>
+        <p>Alec cherche une naine.</p>
+      </div>
+
+      <!-- Parallax Layers -->
+      <div class="parallax-container" id="parallax">
+        <div class="layer layer-sky" data-depth="0.05">
+          <img src="assets/ciel.jpg" alt="Ciel" class="bg-img" />
+        </div>
+        <div class="layer layer-hills" data-depth="0.15">
+          <img src="assets/coline.png" alt="Collines" class="bg-img" />
+        </div>
+
+        <!-- ALEC -->
+        <div class="layer layer-alec" data-depth="0.45" id="alec-layer">
+          <button id="alec-btn" aria-label="Toucher Alec">
+            <div class="alec-shadow"></div>
+            <img src="assets/Alec.png" alt="Alec le cône" id="alec-img" />
+          </button>
+          <div id="bubble-container"></div>
+          <div id="click-hint">👆 clique sur Alec</div>
+        </div>
+
+        <!-- Foreground -->
+        <div class="layer layer-grass" data-depth="0.6">
+          <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <path
+              d="M0,100 L0,20 Q50,60 100,10 Q150,70 200,30 Q250,80 300,20 Q350,90 400,40 Q450,80 500,20 Q550,70 600,10 Q650,80 700,30 Q750,60 800,20 Q850,70 900,10 Q950,50 1000,20 L1000,100 Z"
+              fill="#000000"
+            />
+          </svg>
+        </div>
+        <div class="layer layer-pollen" data-depth="0.8">
+          <div class="pollen-particles"></div>
+        </div>
+      </div>
+
+      <div class="vignette"></div>
+      <div class="film-grain"></div>
+
+      <button id="scroll-hint">
+        Voir son profil 🔞
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M6 9l6 6 6-6" />
+        </svg>
+      </button>
+
+      <button id="audio-toggle" aria-label="Activer le son">🔇</button>
+    </section>
+
+    <!-- PARTIE 2 : PROFIL ONLYFANS -->
+    <section id="profile">
+      <!-- Navbar -->
+      <nav class="of-nav">
+        <div class="of-logo" id="of-logo">OnlyAlec</div>
+        <div class="of-icons">
+          <span class="icon active">🏠</span>
+          <span class="icon">🔔<span class="badge">69</span></span>
+          <span class="icon">✉️</span>
+        </div>
+        <button class="btn-subscribe fake-pay-trigger">S'abonner</button>
+      </nav>
+
+      <div class="of-container">
+        <!-- Header -->
+        <header class="of-header">
+          <div class="of-banner">
+            <div class="banner-content"></div>
+          </div>
+          <div class="of-avatar-wrap">
+            <div
+              class="of-avatar"
+              style="background-image: url(&quot;assets/Alec.png&quot;)"
+            >
+              <span class="online-dot"></span>
+            </div>
+          </div>
+
+          <div class="of-profile-info">
+            <div class="of-name-row">
+              <h2>Alec Vionnet</h2>
+              <span class="verified-badge">✓</span>
+            </div>
+            <p class="of-handle">@alec_cherche_une_naine</p>
+
+            <div class="of-live-badge">
+              🔴 EN LIVE : Alec regarde son plafond (<span id="viewer-count"
+                >1</span
+              >)
+            </div>
+
+            <p class="of-bio">
+              Salut c'est Alec 👋 Je cherche une naine. Oui, une vraie. Non
+              c'est pas une blague (si). Candidatures ouvertes, humour exigé.
+            </p>
+
+            <div class="of-stats">
+              <span>📸 9 photos</span>
+              <span>🎥 0 vidéo (floue)</span>
+              <span>❤️ 3 likes (dont 2 de ma mère)</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Subscribe Box -->
+        <div class="of-subscribe-box">
+          <div class="sub-ribbon">-100 % : offre limitée à ta curiosité</div>
+          <button class="btn-subscribe-large fake-pay-trigger">
+            S'abonner : 0,00 € le 1er mois
+            <small>puis 69,99 €/mois</small>
+          </button>
+        </div>
+
+        <!-- Tabs -->
+        <div class="of-tabs">
+          <button class="tab active">Posts</button>
+          <button class="tab" onclick="alert('Rien à voir ici.')">
+            Médias
+          </button>
+          <button
+            class="tab"
+            onclick="alert('Rupture de stock : il me reste juste mon charisme')"
+          >
+            Boutique
+          </button>
+        </div>
+
+        <!-- Feed -->
+        <div class="of-feed" id="feed-container">
+          <!-- Injected via JS -->
+        </div>
+
+        <!-- Reviews -->
+        <div class="of-reviews">
+          <h3>Avis d'abonnés</h3>
+          <div id="reviews-container"></div>
+        </div>
+
+        <div class="space-bottom"></div>
+      </div>
+
+      <!-- Mobile Sticky CTA -->
+      <div class="mobile-cta">
+        <button class="btn-subscribe-large fake-pay-trigger">
+          S'abonner pour 0 €
+        </button>
+      </div>
+    </section>
+
+    <!-- PARTIE 3 : PAIEMENT MODAL -->
+    <div id="payment-overlay"></div>
+    <div id="payment-modal">
+      <div class="modal-header">
+        <h3>Paiement sécurisé 🔒</h3>
+        <p>(chiffré en ROT13)</p>
+        <button class="close-modal" id="close-modal">×</button>
+      </div>
+
+      <div class="modal-offers">
+        <div class="offer" onclick="selectOffer(this)">
+          <h4>Fan occasionnel</h4>
+          <p class="price">0 € <small>puis 69,99 €/mois</small></p>
+          <ul>
+            <li>✔ Accès à mes photos floues</li>
+            <li>✔ Mon respect (valeur : 0 €)</li>
+          </ul>
+        </div>
+        <div class="offer recommended" onclick="selectOffer(this)">
+          <span class="ribbon">Choix d'Alec</span>
+          <h4>Fan à vie</h4>
+          <p class="price">1 000 000 €</p>
+          <ul>
+            <li>✔ Tout le précédent</li>
+            <li>✔ Réponse de ma mère sous 48h</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fake-form">
+        <label>Titulaire de la carte</label>
+        <input
+          type="text"
+          value="TOI-MÊME"
+          disabled
+          readonly
+          autocomplete="off"
+        />
+        <label>Numéro de carte</label>
+        <input
+          type="text"
+          value="6969 6969 6969 6969"
+          disabled
+          readonly
+          autocomplete="off"
+        />
+        <div class="row">
+          <div>
+            <label>Expiration</label>
+            <input
+              type="text"
+              value="12/99"
+              disabled
+              readonly
+              autocomplete="off"
+            />
+          </div>
+          <div>
+            <label>CVV</label>
+            <input
+              type="text"
+              value="000"
+              disabled
+              readonly
+              autocomplete="off"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="alt-payments">
+        Ou payer en :
+        <button onclick="alert('Accepté (non).')">🪙 Bitcoin (Monopoly)</button>
+        <button onclick="alert('Alec aime ça.')">🍝 Un plat de pâtes</button>
+      </div>
+
+      <button class="btn-pay" id="btn-pay">Payer</button>
+
+      <!-- Loading State -->
+      <div class="payment-loading" id="payment-loading">
+        <h3 id="loading-text">Connexion à ta banque... 🏦</h3>
+        <div class="progress-bar">
+          <div class="progress" id="progress-fill"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- REVELATION SCREEN -->
+    <div id="revelation-screen">
+      <h1 class="bounce-in">T'AS CRU QUOI ? 🤡</h1>
+      <p class="fade-in">
+        Aucun paiement effectué. Aucune donnée collectée. Alec est juste… Alec.
+      </p>
+
+      <div class="receipt fade-in delay">
+        <h4>TICKET DE CAISSE</h4>
+        <div class="receipt-row">
+          <span>Achat de RIEN</span><span>0,00 €</span>
+        </div>
+        <div class="receipt-row">
+          <span>Dignité perdue</span><span>Inestimable</span>
+        </div>
+        <hr />
+        <div class="receipt-row total">
+          <span>TOTAL</span><span>0,00 €</span>
+        </div>
+        <p>
+          <small>Alec Vionnet SARL<br />Sans Aucun Revenu Légitime</small>
+        </p>
+      </div>
+
+      <div class="rev-actions fade-in delay-2">
+        <button class="btn-secondary" id="btn-refund">Me rembourser</button>
+        <button class="btn-primary" id="btn-share">
+          Piéger un autre pote 😈
+        </button>
+        <button class="btn-text" id="btn-replay">Rejouer</button>
+      </div>
+
+      <p class="bonus fade-in delay-3">
+        Plot twist : Alec cherche vraiment une naine… de jardin 🌷
+      </p>
+    </div>
+
+    <!-- Toasts Container -->
+    <div id="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="config.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
