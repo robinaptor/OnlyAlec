@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   // === CONFIGURATION GLOBALE ===
-  let isMuted = true;
+  let isMuted = false;
   let clickCount = 0;
   let lastActionTime = Date.now();
   let availablePhrases = [...CONFIG.phrases];
@@ -246,9 +246,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Audio Toggle
-  document.getElementById('audio-toggle').addEventListener('click', (e) => {
+  const audioToggle = document.getElementById('audio-toggle');
+  audioToggle.addEventListener('click', () => {
     isMuted = !isMuted;
-    e.target.textContent = isMuted ? '🔇' : '🔊';
+    audioToggle.textContent = isMuted ? '🔇' : '🔊';
+    audioToggle.setAttribute('aria-label', isMuted ? 'Activer le son' : 'Désactiver le son');
     initAudio();
   });
 
