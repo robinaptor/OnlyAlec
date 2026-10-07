@@ -738,6 +738,22 @@ button {
   color: var(--of-sub);
 }
 
+.creators-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 20px;
+  padding: 18px 20px;
+  border-top: 1px solid var(--of-border);
+  color: var(--of-sub);
+  font-size: 0.8rem;
+  text-align: center;
+}
+.creators-footer span {
+  color: var(--of-text);
+  font-weight: 600;
+}
+
 .mobile-cta {
   position: fixed;
   bottom: 0;

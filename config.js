@@ -156,7 +156,8 @@ const CONFIG = {
   reviews: [
     { stars: 5, text: "J'ai payé 0 € et j'ai quand même été déçu.", author: "Kevin, 42 ans" },
     { stars: 1, text: "Je cherchais des photos. J'ai trouvé un cône.", author: "Sandrine" },
-    { stars: 5, text: "Alec, rends-moi mes pâtes.", author: "Jean-Michel" }
+    { stars: 5, text: "Alec, rends-moi mes pâtes.", author: "Jean-Michel" },
+    { stars: 5, text: "À quand le feat avec Mathieu ?", author: "Selena" }
   ],
 
   // Toasts aléatoires
