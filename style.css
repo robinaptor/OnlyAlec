@@ -675,6 +675,9 @@ button {
   color: white;
   transition: opacity 0.4s;
 }
+.photo-preview {
+  cursor: pointer;
+}
 .locked-overlay .lock-icon {
   font-size: 3rem;
   margin-bottom: 10px;
@@ -764,6 +767,88 @@ button {
   border-top: 1px solid var(--of-border);
   z-index: 50;
   display: none; /* Shown via JS on scroll */
+}
+
+.photo-reveal-dialog {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  width: min(92vw, 440px);
+  max-width: 92vw;
+  max-height: 92vh;
+  padding: 22px;
+  overflow-y: auto;
+  border: 0;
+  border-radius: 20px;
+  background: white;
+  color: var(--of-text);
+  box-shadow: 0 16px 60px rgba(0, 0, 0, 0.35);
+}
+.photo-reveal-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.68);
+  backdrop-filter: blur(5px);
+}
+.photo-reveal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+#photo-reveal-step {
+  color: var(--of-sub);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.photo-reveal-close {
+  color: var(--of-sub);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+#photo-reveal-question {
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  line-height: 1.35;
+}
+.photo-reveal-actions {
+  display: grid;
+  gap: 10px;
+}
+.photo-reveal-yes,
+.photo-reveal-no {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 22px;
+  font-weight: 700;
+}
+.photo-reveal-yes {
+  background: var(--of-blue);
+  color: white;
+}
+.photo-reveal-no {
+  background: var(--of-bg);
+  color: var(--of-text);
+}
+.photo-reveal-result {
+  margin: 0 -4px 16px;
+  text-align: center;
+}
+.photo-reveal-result img {
+  display: block;
+  width: 100%;
+  max-height: 68vh;
+  object-fit: contain;
+  border-radius: 12px;
+}
+.photo-reveal-finish {
+  display: block;
+}
+.photo-reveal-finish[hidden],
+.photo-reveal-result[hidden],
+.photo-reveal-actions[hidden],
+#photo-reveal-question[hidden] {
+  display: none;
 }
 
 /* ================= MODALS & REVELATION ================= */

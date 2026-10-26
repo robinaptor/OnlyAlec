@@ -273,6 +273,74 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // === 3. BUILD PROFIL ONLYFANS ===
   const feedContainer = document.getElementById('feed-container');
+  const photoRevealDialog = document.getElementById('photo-reveal-dialog');
+  const photoRevealStep = document.getElementById('photo-reveal-step');
+  const photoRevealQuestion = document.getElementById('photo-reveal-question');
+  const photoRevealResult = document.getElementById('photo-reveal-result');
+  const photoRevealActions = document.getElementById('photo-reveal-actions');
+  const photoRevealYes = document.getElementById('photo-reveal-yes');
+  const photoRevealNo = document.getElementById('photo-reveal-no');
+  const photoRevealFinish = document.getElementById('photo-reveal-finish');
+  const confirmationPrompts = [
+    {
+      question: 'Tu veux vraiment voir ça ?',
+      yes: 'Oui, je suis curieux',
+      no: 'Non, je passe'
+    },
+    {
+      question: 'Tu es sûr ? Après, impossible de faire comme si tu ne l’avais pas vu.',
+      yes: 'Je prends le risque',
+      no: 'Finalement, non'
+    },
+    {
+      question: 'Dernière chance… tu veux toujours continuer ?',
+      yes: 'Oui, continue',
+      no: 'J’arrête là'
+    }
+  ];
+  let confirmationIndex = 0;
+
+  const showConfirmation = () => {
+    const prompt = confirmationPrompts[confirmationIndex];
+    photoRevealStep.textContent = `Confirmation ${confirmationIndex + 1} / ${confirmationPrompts.length}`;
+    photoRevealQuestion.textContent = prompt.question;
+    photoRevealYes.textContent = prompt.yes;
+    photoRevealNo.textContent = prompt.no;
+  };
+
+  const openPhotoReveal = () => {
+    confirmationIndex = 0;
+    photoRevealDialog.setAttribute('aria-labelledby', 'photo-reveal-question');
+    photoRevealDialog.removeAttribute('aria-label');
+    photoRevealResult.hidden = true;
+    photoRevealQuestion.hidden = false;
+    photoRevealActions.hidden = false;
+    photoRevealFinish.hidden = true;
+    showConfirmation();
+    photoRevealDialog.showModal();
+  };
+
+  photoRevealYes.addEventListener('click', () => {
+    confirmationIndex++;
+    if (confirmationIndex < confirmationPrompts.length) {
+      showConfirmation();
+      return;
+    }
+
+    photoRevealStep.textContent = 'Révélation';
+    photoRevealDialog.removeAttribute('aria-labelledby');
+    photoRevealDialog.setAttribute('aria-label', 'Révélation de la photo');
+    photoRevealQuestion.hidden = true;
+    photoRevealActions.hidden = true;
+    photoRevealResult.hidden = false;
+    photoRevealFinish.hidden = false;
+  });
+  photoRevealNo.addEventListener('click', () => photoRevealDialog.close());
+  photoRevealFinish.addEventListener('click', () => photoRevealDialog.close());
+  document.getElementById('photo-reveal-close').addEventListener('click', () => {
+    photoRevealDialog.close();
+  });
+
   CONFIG.posts.forEach(post => {
     const postEl = document.createElement('div');
     postEl.className = 'of-post';
@@ -289,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
       </div>`;
     } else {
       mediaHTML = `
-      <div class="post-media-wrap">
+      <div class="post-media-wrap${post.id === 7 ? ' photo-preview' : ''}">
         <div class="post-media" style="background-position: ${post.imagePos}; background-size: ${post.imageScale};"></div>
         <div class="locked-overlay">
           <div class="lock-icon">🔒</div>
@@ -318,6 +386,11 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="post-likes">${post.likes}</div>
     `;
     feedContainer.appendChild(postEl);
+
+    if (post.id === 7) {
+      postEl.querySelector('.post-media-wrap').addEventListener('click', openPhotoReveal);
+      postEl.querySelector('.btn-unlock').classList.remove('fake-pay-trigger');
+    }
   });
 
   // Reviews

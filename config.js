@@ -11,7 +11,7 @@ const CONFIG = {
     "Les meilleurs parfums sont dans les petits flacons. Les meilleurs mecs aussi. Enfin… moi.",
     "Mes critères : de l'humour, moins d'1m50, des pâtes. Tout est négociable sauf les pâtes.",
     "Je cherche une naine. Une étoile, hein. Je suis romantique, pas dérangé.",
-    
+
     // Vendeur de contenu
     "Abonne-toi ! J'ai déjà un abonné : mon père. Il est pas content.",
     "Contenu exclusif : moi qui regarde mon téléphone pendant 45 minutes.",
@@ -21,7 +21,7 @@ const CONFIG = {
     "100 % bio, 0 % talent.",
     "Mon banquier m'a dit d'arrêter. Je l'ai bloqué.",
     "Promotion exceptionnelle : je te parle pas pendant 24h pour 5€.",
-    
+
     // Romantique en détresse
     "Mon dernier date m'a dit « tu es unique ». Je crois que c'était un compliment.",
     "Je cherche l'amour. Et mes clés. L'un des deux me suffira.",
@@ -30,7 +30,7 @@ const CONFIG = {
     "Moins d'1m50 et fan de pâtes ? Écris-moi. Plus grande ? Écris-moi quand même, j'ai personne.",
     "J'ai acheté deux brosses à dents au cas où. Ça fait 3 ans.",
     "Je pleure pas, c'est le pollen. Enfin, le pollen de la solitude.",
-    
+
     // Spam de clics
     "Aïe ! Pas sur la pointe !",
     "Tu cliques comme tu swipes : sans réfléchir.",
@@ -40,7 +40,7 @@ const CONFIG = {
     "OK t'es fan. Descends, la suite est payante.",
     "Tu sais que tu me fais mal virtuellement ?",
     "On se connaît ? Parce que tu me touches beaucoup là.",
-    
+
     // Phrases de con pures
     "Un cône, c'est juste un triangle qui a réussi.",
     "Je suis tellement pointu que j'ai même des avis pointus.",
@@ -48,7 +48,7 @@ const CONFIG = {
     "Si je tombe, je roule en rond. C'est la physique, pas ma faute.",
     "J'ai pas de ventre, j'ai une base solide.",
     "On dit que j'ai la tête dans les nuages, mais c'est juste la forme.",
-    "Je peux te piquer si tu t'approches trop."
+    "Je peux te piquer si tu t'approches trop.",
   ],
 
   // Posts du faux OnlyFans
@@ -59,11 +59,12 @@ const CONFIG = {
       time: "il y a 2 min",
       likes: "2 likes",
       comments: 2,
-      beforeText: "📌 AVIS DE RECHERCHE : Alec cherche une naine. Sérieux uniquement (enfin, drôles).",
+      beforeText:
+        "📌 AVIS DE RECHERCHE : Alec cherche une naine. Sérieux uniquement (enfin, drôles).",
       afterText: "Ouais, c'est moi. T'es déçu ? T'as raison.",
-      imagePos: "50% 50%", 
+      imagePos: "50% 50%",
       imageScale: "100%", // Photo entière
-      price: "0,00 €"
+      price: "0,00 €",
     },
     {
       id: 2,
@@ -73,9 +74,9 @@ const CONFIG = {
       comments: 0,
       beforeText: "Nouvelle photo exclusive 🔥 (vous allez pas en revenir)",
       afterText: "Mon visage. T'attendais quoi ?",
-      imagePos: "50% 52%", 
+      imagePos: "50% 52%",
       imageScale: "350%", // Zoom sur visage
-      price: "4,99 €"
+      price: "4,99 €",
     },
     {
       id: 3,
@@ -85,9 +86,9 @@ const CONFIG = {
       comments: 0,
       beforeText: "Mes oreilles sous tous les angles 👂",
       afterText: "Des oreilles. Grandes. Voilà.",
-      imagePos: "34% 47%", 
+      imagePos: "34% 47%",
       imageScale: "400%", // Zoom sur oreille gauche
-      price: "2,99 €"
+      price: "2,99 €",
     },
     {
       id: 4,
@@ -97,9 +98,9 @@ const CONFIG = {
       comments: 1,
       beforeText: "Pieds 🦶 (contenu premium)",
       afterText: "Des chaussures. Je t'avais prévenu.",
-      imagePos: "50% 92%", 
+      imagePos: "50% 92%",
       imageScale: "250%", // Zoom sur chaussures
-      price: "14,99 €"
+      price: "14,99 €",
     },
     {
       id: 5,
@@ -109,9 +110,9 @@ const CONFIG = {
       comments: 0,
       beforeText: "Moi qui fais ✌️ pour attirer une naine (ça marche pas)",
       afterText: "Une main. Qui fait ✌️. Y'a pas de piège.",
-      imagePos: "78% 47%", 
+      imagePos: "78% 47%",
       imageScale: "450%", // Zoom sur main ✌️
-      price: "4,99 €"
+      price: "4,99 €",
     },
     {
       id: 6,
@@ -121,9 +122,9 @@ const CONFIG = {
       comments: 0,
       beforeText: "Vue de dessous (ma mère s'est allongée par terre)",
       afterText: "Le dessous d'un cône. Il y a rien dedans.",
-      imagePos: "50% 71%", 
+      imagePos: "50% 71%",
       imageScale: "300%", // Zoom sur base
-      price: "9,99 €"
+      price: "9,99 €",
     },
     {
       id: 7,
@@ -133,9 +134,9 @@ const CONFIG = {
       comments: 0,
       beforeText: "3 h du mat, je cherche une naine sur Google Maps",
       afterText: "Mes cheveux à 3 h du mat. Sans commentaire.",
-      imagePos: "49% 32%", 
+      imagePos: "49% 32%",
       imageScale: "400%", // Zoom sur cheveux
-      price: "1,99 €"
+      price: "1,99 €",
     },
     {
       id: 8,
@@ -145,19 +146,27 @@ const CONFIG = {
       comments: 0,
       isTextOnly: true,
       beforeText: "💌 Message privé d'Alec",
-      afterText: "\"Salut.\"\n— Alec (il t'a fait payer pour ça)",
+      afterText: '"Salut."\n— Alec (il t\'a fait payer pour ça)',
       imagePos: "center",
       imageScale: "cover",
-      price: "24,99 €"
-    }
+      price: "24,99 €",
+    },
   ],
 
   // Les avis
   reviews: [
-    { stars: 5, text: "J'ai payé 0 € et j'ai quand même été déçu.", author: "Kevin, 42 ans" },
-    { stars: 1, text: "Je cherchais des photos. J'ai trouvé un cône.", author: "Sandrine" },
+    {
+      stars: 5,
+      text: "J'ai payé 0 € et j'ai quand même été déçu.",
+      author: "Kevin, 42 ans",
+    },
+    {
+      stars: 1,
+      text: "Je cherchais des photos. J'ai trouvé un cône.",
+      author: "Sandrine",
+    },
     { stars: 5, text: "Alec, rends-moi mes pâtes.", author: "Jean-Michel" },
-    { stars: 5, text: "À quand le feat avec Mathieu ?", author: "Selena" }
+    { stars: 5, text: "À quand le feat avec Mathieu ?", author: "Selena" },
   ],
 
   // Toasts aléatoires
@@ -167,6 +176,6 @@ const CONFIG = {
     "🔔 Sandrine a quitté la page (choquée)",
     "🔔 Ta mère te suggère de fermer cet onglet",
     "🔔 Un paiement de 69,99 € a presque été initié",
-    "🔔 Alec est en train de taper..."
-  ]
+    "🔔 Alec est en train de taper...",
+  ],
 };

@@ -199,6 +199,44 @@
       </div>
     </section>
 
+    <dialog
+      class="photo-reveal-dialog"
+      id="photo-reveal-dialog"
+      aria-labelledby="photo-reveal-question"
+    >
+      <div class="photo-reveal-header">
+        <p id="photo-reveal-step"></p>
+        <button
+          class="photo-reveal-close"
+          id="photo-reveal-close"
+          type="button"
+          aria-label="Fermer"
+        >
+          ×
+        </button>
+      </div>
+      <h2 id="photo-reveal-question"></h2>
+      <div class="photo-reveal-result" id="photo-reveal-result" hidden>
+        <img src="assets/Meven.jpg" alt="Meven avec un filtre de cœurs" />
+      </div>
+      <div class="photo-reveal-actions" id="photo-reveal-actions">
+        <button class="photo-reveal-yes" id="photo-reveal-yes" type="button">
+          Oui, je confirme
+        </button>
+        <button class="photo-reveal-no" id="photo-reveal-no" type="button">
+          Non, finalement
+        </button>
+      </div>
+      <button
+        class="photo-reveal-yes photo-reveal-finish"
+        id="photo-reveal-finish"
+        type="button"
+        hidden
+      >
+        Fermer
+      </button>
+    </dialog>
+
     <!-- PARTIE 3 : PAIEMENT MODAL -->
     <div id="payment-overlay"></div>
     <div id="payment-modal">
